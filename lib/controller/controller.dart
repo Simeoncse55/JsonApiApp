@@ -16,6 +16,7 @@ class StudentsDetails extends GetxController {
 
       if (response.statusCode == 200) {
         var result = convert.jsonDecode(response.body);
+
         students.addAll(List<Students>.from(
             result['students'].map((e) => Students.fromJson(e))));
         print("Hii");
